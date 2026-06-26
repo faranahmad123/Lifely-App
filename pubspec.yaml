@@ -1,0 +1,70 @@
+name: lifely_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- REQUIRED DEPENDENCIES FOR LIFELY ---
+
+  # For the "Medical Icons" and iOS style icons
+  cupertino_icons: ^1.0.6
+
+  # For the "Poppins" font used in main.dart
+  google_fonts: ^6.1.0
+
+  # To access Camera & Gallery in Scan Report Screen
+  image_picker: ^1.2.2
+
+  # To connect with your Python Backend (FastAPI) later
+  http: ^1.2.0
+
+  # For formatting dates (e.g., "Dec 12, 2025")
+  intl: ^0.19.0
+
+  # For viewing the PDF reports
+  flutter_pdfview: ^1.3.2
+
+  # --- Firebase ---
+  firebase_core: ^3.13.0
+  firebase_auth: ^5.6.0
+  cloud_firestore: ^5.6.7
+  firebase_messaging: ^15.2.7
+
+  # --- PDF Receipt Generation ---
+  pdf: ^3.11.2
+  path_provider: ^2.1.5
+  permission_handler: ^11.3.1
+
+  # --- State Management ---
+  provider: ^6.1.2
+  shared_preferences: ^2.5.5
+  printing: ^5.14.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+  # --- ADDED: Package to generate App Icons ---
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  # --- ADDED: Register the assets folder so Flutter finds the image ---
+  assets:
+    - assets/
+
+# --- ADDED: Configuration for App Icon ---
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon.png"
+  min_sdk_android: 21
